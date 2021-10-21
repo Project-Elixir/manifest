@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="elixir"
+          fetch="https://github.com/Project-Elixir"
+          revision="snow" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="elixir" />
+  <project path="frameworks/base" name="frameworks_base" remote="elixir" />
+  <project path="frameworks/native" name="frameworks_native" remote="elixir" />
+  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="elixir" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="elixir" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="elixir" />
+
+  <!-- General repos -->
+  <project path="art" name="art" remote="elixir" />
+  <project path="bionic" name="bionic" remote="elixir" />
+  <project path="build/make" name="build" remote="elixir">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="elixir" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="build/blueprint" name="build_blueprint" remote="elixir" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="elixir" />
+  <project path="development" name="development" remote="elixir" />
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="elixir" />
+  <project path="manifest" name="manifest" remote="elixir" />
+  <project path="platform_testing" name="platform_testing" remote="elixir" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="elixir" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="elixir" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="elixir" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="elixir" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="elixir" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="elixir" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="elixir" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="elixir" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
+
+  <!-- System Repos -->
+  <project path="system/bt" name="system_bt" remote="elixir" />
+  <project path="system/core" name="system_core" remote="elixir" />
+  <project path="system/netd" name="system_netd" remote="elixir" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
+  <project path="system/vold" name="system_vold" remote="elixir" />
+
+</manifest>

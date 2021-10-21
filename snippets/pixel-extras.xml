@@ -12,14 +12,11 @@
   <project path="external/tinyxml" name="external_tinyxml" remote="pixel" />
 
   <!-- General repos -->
-  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="pixel" />
-  <project path="vendor/aosp" name="vendor_aosp" remote="pixel" />
   <project path="vendor/gapps" name="vendor_gapps" remote="pixel-gitlab" clone-depth="1" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="pixel" />
   <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="pixel" />
 
   <!-- Hardware repos -->
-  <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="pixel" />
   <project path="hardware/broadcom/nfc" name="hardware_broadcom_nfc" remote="pixel" />
 
   <!-- Packages repos -->
