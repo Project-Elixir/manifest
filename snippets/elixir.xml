@@ -56,4 +56,6 @@
   <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
   <project path="system/vold" name="system_vold" remote="elixir" />
 
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
+
 </manifest>
