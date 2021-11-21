@@ -5,6 +5,10 @@
           fetch="https://github.com/Project-Elixir"
           revision="snow" />
 
+  <remote name="elixir-gitlab"
+          fetch="https://gitlab.com/uglykidaf"
+          revision="twelve" />
+
   <!-- Framework repos -->
   <project path="frameworks/av" name="frameworks_av" remote="elixir" />
   <project path="frameworks/base" name="frameworks_base" remote="elixir" />
@@ -57,5 +61,7 @@
   <project path="system/vold" name="system_vold" remote="elixir" />
 
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
+
+<project path="vendor/gapps" name="vendor-gapps-elixir" remote="elixir-gitlab" clone-depth="1" />
 
 </manifest>
