@@ -52,6 +52,7 @@
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="elixir" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="elixir" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="elixir" />
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" remote="elixir" />
@@ -60,8 +61,11 @@
   <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
   <project path="system/vold" name="system_vold" remote="elixir" />
 
+  <!-- Device Repos -->	  
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="elixir" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="elixir" />
 
-<project path="vendor/gapps" name="vendor-gapps-elixir" remote="elixir-gitlab" clone-depth="1" />
+  <project path="vendor/gapps" name="vendor-gapps-elixir" remote="elixir-gitlab" clone-depth="1" />
 
 </manifest>
