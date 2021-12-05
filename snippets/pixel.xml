@@ -32,7 +32,6 @@
   <project path="external/libcxx" name="external_libcxx" remote="pixel" />
   <project path="external/mksh" name="external_mksh" remote="pixel" />
   <project path="external/perfetto" name="external_perfetto" remote="pixel" />
-  <project path="external/selinux" name="external_selinux" remote="pixel" />
   <project path="external/tinyalsa" name="external_tinyalsa" remote="pixel" />
   <project path="external/tinycompress" name="external_tinycompress" remote="pixel" />
   <project path="external/toybox" name="external_toybox" remote="pixel" />
