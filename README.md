@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/NdMZ3h4.png" />
+  <img src="https://i.imgur.com/snHlKrS.jpg" />
 </p>
 
 
@@ -52,7 +52,7 @@ mka bacon -jX
 ```
 
 <p align="center">
-  <img src="https://i.imgur.com/cOhoAaU.jpg" />
+  <img src="https://i.imgur.com/BWBCkKG.jpg" />
 </p>
 
 
@@ -63,7 +63,7 @@ mka bacon -jX
  * [**ArrowOS**](https://github.com/ArrowOS)
 
 <p align="center">
-  <img src="https://i.imgur.com/yP3XUM6.jpg" />
+  <img src="https://i.imgur.com/vDVCAR5.jpg" />
 </p>
 
 
