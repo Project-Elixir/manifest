@@ -58,7 +58,6 @@
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" remote="elixir" />
-  <project path="system/core" name="system_core" remote="elixir" />
   <project path="system/netd" name="system_netd" remote="elixir" />
   <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
   <project path="system/vold" name="system_vold" remote="elixir" />
