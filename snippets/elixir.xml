@@ -54,6 +54,7 @@
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="elixir" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
   <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="elixir" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="elixir" />
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" remote="elixir" />
@@ -61,6 +62,7 @@
   <project path="system/netd" name="system_netd" remote="elixir" />
   <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
   <project path="system/vold" name="system_vold" remote="elixir" />
+  <project path="system/update_engine" name="system_update_engine" remote="elixir" />
 
   <!-- Device Repos -->	  
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
