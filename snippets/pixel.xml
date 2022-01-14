@@ -91,7 +91,6 @@
   <project path="system/security" name="system_security" remote="pixel" />
   <project path="system/timezone" name="system_timezone" remote="pixel" />
   <project path="system/tools/hidl" name="system_tools_hidl" remote="pixel" />
-  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="pixel" />
 
   <!-- Tools Repos -->
   <project path="tools/metalava" name="tools_metalava" remote="pixel" />
