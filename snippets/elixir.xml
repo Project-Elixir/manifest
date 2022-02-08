@@ -55,6 +55,7 @@
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
   <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="elixir" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="elixir" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="elixir" />
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" remote="elixir" />
