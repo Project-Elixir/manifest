@@ -46,6 +46,7 @@
   <project path="hardware/interfaces" name="hardware_interfaces" remote="elixir" />
   <project path="hardware/libhardware" name="hardware_libhardware" remote="elixir" />
   <project path="hardware/nxp/nfc" name="hardware_nxp_nfc" remote="elixir" />
+  <project path="hardware/motorola" name="hardware_motorola" remote="elixir" />
 
   <!-- Packages repos -->
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="elixir" />
