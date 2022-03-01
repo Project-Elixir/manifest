@@ -39,6 +39,8 @@
   <!-- Framework repos -->
   <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" remote="pixel" />
 
+  <project path="kernel/configs" name="kernel_configs" remote="pixel" />
+	  
   <!-- Hardware repos -->
   <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" remote="pixel" />
   <project path="hardware/google/pixel" name="hardware_google_pixel" remote="pixel" />
