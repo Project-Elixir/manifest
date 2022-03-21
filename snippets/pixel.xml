@@ -19,7 +19,7 @@
 	  revision="twelve" />
 
   <remote name="pixel-gitlab"
-          fetch="https://gitlab.com/PixelExperience"
+          fetch="https://gitlab.com/PixelExperience/twelve"
           revision="twelve" />
 
   <!-- External repos -->
