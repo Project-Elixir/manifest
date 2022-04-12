@@ -58,7 +58,6 @@
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="elixir" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="elixir" />
   <project path="packages/apps/RepainterServicePriv" name="packages_apps_RepainterServicePriv" remote="elixir" />
-  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="elixir" />
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" remote="elixir" />
