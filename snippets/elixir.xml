@@ -61,11 +61,16 @@
 
   <!-- System Repos -->
   <project path="system/bt" name="system_bt" remote="elixir" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="elixir" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" remote="elixir" />
+  <project path="system/core" name="android_system_core" remote="elixir" />
   <project path="system/netd" name="system_netd" remote="elixir" />
   <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
   <project path="system/vold" name="system_vold" remote="elixir" />
   <project path="system/update_engine" name="system_update_engine" remote="elixir" />
   <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="elixir" />
+  <project path="system/security" name="system_security" remote="elixir" />
+  <project path="system/media" name="system_media" remote="elixir" />
 
   <!-- Device Repos -->	  
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
@@ -80,6 +85,7 @@
   <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" remote="elixir" />
   <project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="vendor_qcom_opensource_commonsys_bluetooth_ext" remote="elixir" />
   <project path="vendor/qcom/opensource/commonsys/system/bt" name="vendor_qcom_opensource_commonsys_system_bt" remote="elixir" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="elixir" />
 
   <!-- Extras -->
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="github" revision="master" clone-depth="1" />
