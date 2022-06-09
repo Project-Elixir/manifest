@@ -38,7 +38,7 @@
   <project path="development" name="development" remote="elixir" />
   <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="elixir" />
   <project path="manifest" name="manifest" remote="elixir" />
-  <project path="platform_testing" name="platform_testing" remote="elixir" />
+  <project path="platform_testing" name="android_platform_testing" remote="elixir" />
   <project path="vendor/aosp" name="vendor_aosp" remote="elixir" />
 
   <!-- Hardware repos -->
