@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="elixir"
+          fetch="https://github.com/Project-Elixir"
+          revision="refs/heads/Tiramisu" />
+
+  <remote name="elixir-gitlab"
+          fetch="https://gitlab.com/projectelixiros/"
+          revision="refs/heads/Tiramisu" />
+
+  <remote name="elixir-devices"
+          fetch="https://github.com/ProjectElixir-Devices"
+          revision="refs/heads/master" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="elixir" />
+  <project path="frameworks/base" name="frameworks_base" remote="elixir" />
+  <project path="frameworks/native" name="frameworks_native" remote="elixir" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="elixir" />
+  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="elixir" />
+
+  <!-- General repos -->
+  <project path="manifest" name="manifest" remote="elixir" />
+  <project path="bionic" name="bionic" remote="elixir" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="elixir" />
+  <project path="build/make" name="build" remote="elixir" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="elixir" groups="pdk,tradefed" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Hardware repos -->
+  <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="elixir" />
+  <project path="hardware/lineage/livedisplay" name="PixelExperience/hardware_lineage_livedisplay" revision="twelve-plus" remote="github" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="elixir">
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- for AOSP sdm845 and sm8150, we override os_pickup.mk -->
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sdm845/Android.mk" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom/sm8150/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm660/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm660/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="hardware/nxp/Android.bp" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/pn5xx/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/pn5xx/Android.mk" />
+    <linkfile src="os_pickup.bp" dest="vendor/nxp/opensource/sn100x/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="vendor/nxp/opensource/sn100x/Android.mk" />
+    <!-- add namespace for BT adv audio, as required for QTI BT stack -->
+    <linkfile src="os_pickup_qssi_bt.bp" dest="device/qcom/qssi/Android.bp" />
+  </project>
+
+  <project path="hardware/qcom-caf/msm8953/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="lineage-20.0-caf-msm8953" />
+  <project path="hardware/qcom-caf/msm8953/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="lineage-20.0-caf-msm8953" />
+  <project path="hardware/qcom-caf/msm8953/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" remote="github" revision="lineage-20.0-caf-msm8953" />
+  <project path="hardware/qcom-caf/msm8996/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-20.0-caf-msm8996" remote="github" />
+  <project path="hardware/qcom-caf/msm8996/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-20.0-caf-msm8996" remote="github" />
+  <project path="hardware/qcom-caf/msm8996/media" name="LineageOS/android_hardware_qcom_media" groups="pdk-qcom,qcom,qcom_media" revision="lineage-20.0-caf-msm8996" remote="github" />
+  <project path="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/audio" name="PixelExperience/hardware_qcom-caf_msm8996_audio" revision="twelve-LA.UM.9.6.2.r1-04100-89xx.0" remote="github" />
+  <project path="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/display" name="PixelExperience/hardware_qcom-caf_msm8996_display" revision="twelve-LA.UM.9.6.2.r1-04100-89xx.0" remote="github" />
+  <project path="hardware/qcom-caf/msm8996-LA.UM.9.6.2.r1-04100-89xx.0/media" name="PixelExperience/hardware_qcom-caf_msm8996_media" revision="twelve-LA.UM.9.6.2.r1-04100-89xx.0" remote="github" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-20.0-caf-msm8998" remote="github" />
+  <project path="hardware/qcom-caf/msm8998/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-20.0-caf-msm8998" remote="github" />
+  <project path="hardware/qcom-caf/msm8998/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-20.0-caf-msm8998" remote="github" />
+  <project path="hardware/qcom-caf/sdm660/audio" name="ArrowOS/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="arrow-12.1-caf-sdm660" remote="github" />
+  <project path="hardware/qcom-caf/sdm660/display" name="ArrowOS/android_hardware_qcom_display" groups="qcom,qcom_display" revision="arrow-12.1-caf-sdm660" remote="github" />
+  <project path="hardware/qcom-caf/sdm660/media" name="ArrowOS/android_hardware_qcom_media" groups="qcom,qcom_media" revision="arrow-12.1-caf-sdm660" remote="github" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-20.0-caf-sdm845" remote="github" />
+  <project path="hardware/qcom-caf/sdm845/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-20.0-caf-sdm845" remote="github" />
+  <project path="hardware/qcom-caf/sdm845/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-20.0-caf-sdm845" remote="github" />
+  <project path="hardware/qcom-caf/sm8150/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-20.0-caf-sm8150" remote="github" />
+  <project path="hardware/qcom-caf/sm8150/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-20.0-caf-sm8150" remote="github" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-20.0-caf-sm8150" remote="github" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="lineage-20.0-caf-sm8250" remote="github" />
+  <project path="hardware/qcom-caf/sm8250/display" name="LineageOS/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="lineage-20.0-caf-sm8250" remote="github" />
+  <project path="hardware/qcom-caf/sm8250/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="lineage-20.0-caf-sm8250" remote="github" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="lineage-20.0-caf-sm8350" remote="github" />
+  <project path="hardware/qcom-caf/sm8350/display" name="LineageOS/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" revision="lineage-20.0-caf-sm8350" remote="github" />
+  <project path="hardware/qcom-caf/sm8350/media" name="LineageOS/android_hardware_qcom_media" groups="qcom" revision="lineage-20.0-caf-sm8350" remote="github" />
+  <project path="hardware/qcom-caf/wlan" name="ArrowOS/android_hardware_qcom_wlan" revision="arrow-12.1-caf" remote="github" />
+  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="elixir" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="elixir" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="elixir" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="elixir" />
+  <project path="hardware/xiaomi" name="hardware_xiaomi" remote="elixir" />
+
+  <!-- External repos -->
+  <project path="external/tinycompress" name="external_tinycompress" remote="elixir" />
+  <project path="external/selinux" name="external_selinux" remote="elixir" />
+
+  <!-- Packages repos -->
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="elixir" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="elixir" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="elixir" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="elixir" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="elixir" />
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="elixir" />
+
+  <!-- Providers repos -->
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="elixir" />
+
+  <!-- QCOM Sepolicies -->
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="elixir" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="elixir" />
+
+  <!-- Services repos -->
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="elixir" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="elixir" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="elixir" />
+
+  <!-- System repos -->
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="elixir" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="elixir" />
+  <project path="system/security" name="system_security" remote="elixir" />
+  <project path="system/media" name="system_media" remote="elixir" />
+  <project path="system/core" name="android_system_core" remote="elixir" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="elixir" />
+  <project path="system/libhidl" name="system_libhidl" remote="elixir" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/aosp" name="vendor_aosp" remote="elixir" />
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="elixir" />
+  <project path="vendor/gms" name="vendor_gapps" remote="elixir-gitlab" clone-depth="1" />
+  <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="elixir" />
+  <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="elixir" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="elixir" />
+  <project path="vendor/qcom/opensource/healthd-ext" name="vendor_qcom_opensource_healthd-ext" remote="elixir" />
+
+  <!-- Prebuilts repos -->
+  <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="elixir"  clone-depth="1" />
+
+  <!-- Extras -->
+  <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="github" revision="master" clone-depth="1" />
+  <project path="prebuilts/tools-custom" name="prebuilts_tools-custom" remote="elixir" clone-depth="1" />
+
+</manifest>
