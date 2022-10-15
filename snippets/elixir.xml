@@ -133,6 +133,7 @@
   <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" remote="elixir" />
   <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="elixir" />
   <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="elixir" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr-legacy-um" groups="qcom,lahaina" remote="elixir" />
 
   <!-- Services repos -->
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir" />
