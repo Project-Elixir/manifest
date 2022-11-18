@@ -1188,6 +1188,9 @@
 
   <!-- LineageOS -->
   <include name="snippets/lineage.xml" />
+
+  <!-- ArrowOS -->
+  <include name="snippets/arrow.xml" />
   
   <!-- END open-source projects -->
 </manifest>
