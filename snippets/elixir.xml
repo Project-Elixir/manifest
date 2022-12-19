@@ -186,6 +186,8 @@
 
   <!-- Prebuilts repos -->
   <project path="prebuilts/build-tools" name="prebuilts_build-tools" remote="elixir"  clone-depth="1" />
+  <project path="vendor/qcom/opensource/commonsys/display" name="vendor_qcom_opensource_commonsys_display" remote="pixel" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_commonsys-intf_display" remote="pixel" />	  
 
   <!-- Extras -->
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="github" revision="master" clone-depth="1" />
