@@ -178,7 +178,7 @@
   <!-- Vendor repos -->
   <project path="vendor/aosp" name="vendor_aosp" remote="elixir" />
   <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="elixir" />
-  <project path="vendor/gms" name="vendor_gapps" remote="elixir-gitlab" clone-depth="1" />
+  <project path="vendor/gms" name="vendor_gapps" remote="elixir-gitlab" revision="Tiramisu-Public" clone-depth="1" />
   <project path="vendor/qcom/opensource/vibrator" name="android_vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" remote="elixir" />
   <project path="vendor/codeaurora/telephony" name="vendor_codeaurora_telephony" remote="elixir" />
   <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,pdk-qcom" remote="elixir" />
