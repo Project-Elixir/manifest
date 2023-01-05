@@ -1,11 +1,12 @@
 <p align="center">
-  <img src="https://i.imgur.com/C0Wcdr5.png" />
+  <img src="https://i.imgur.com/po2OKNU.png" />
 </p>
 
+### Welcome to the Project 𝓔𝓵𝓲𝔁𝓲𝓻 /////////////// 
 
-### Project Elixir [![Download Project Elixir](https://img.shields.io/sourceforge/dt/project-elixir.svg)](https://projectelixiros.com/download)
+Project Elixir basically offers a premium minimal UI enhancement & close to Stock Android ROM with great performance, security and stability. Your experience while using our ROM will be buttery smooth without compromising the quality of the Android experience. So do not hesitate anymore, join us now and start enjoying the beauty of stock Android. 
 
-Project Elixir is another aftermarket AOSP ROM which basically offers minimal UI enhancement & close to Stock Android ROM with great performance, security and stability. Most of the OEMs' these days will provide slow and untimely updates, but we don't do that here. We closely follow Google to bring the latest updates to our users, and even prolong support for devices that have been declared obsolete by OEMs. Our ROMs' source code is open-source, secure, stable, and outstanding. Your experience while using Project Elixir will be butter smooth without compromising the quality of the Android experience. In short, it's perfectly balanced between Great Performance, Security, stability, minimal UI & awesome features including pixel goodies. So do not hesitate anymore, join us now and start enjoying the beauty of stock Android. Build and enjoy Project Elixir on your respective devices!
+[![Download Project Elixir [Custom ROM]](https://img.shields.io/sourceforge/dm/project-elixir.svg)](https://projectelixiros.com/download) <img src="https://komarev.com/ghpvc/?username=Project-Elixir&style=flat-square" alt="Project-Elixir" />  [![Download Project Elixir [Custom ROM]](https://img.shields.io/sourceforge/dt/project-elixir.svg)](https://projectelixiros.com/download) 
 
 To get started, you'll need to get
 familiar with [Repo](https://source.android.com/source/using-repo.html) and [Version Control with Git](https://source.android.com/source/version-control.html).
@@ -16,23 +17,16 @@ familiar with [Repo](https://source.android.com/source/using-repo.html) and [Ver
 * WORKSPACE with your directory for the rest of this guide.
 * This can be located anywhere (as long as the fs is case-sensitive)
 
-```bash
+```
 mkdir WORKSPACE
+```
+```
 cd WORKSPACE
 ```
 
 ### Install Repo in the created directory
-
->> [Hint: This might take a long time]
-
 ```bash
 repo init -u https://github.com/Project-Elixir/manifest -b Tiramisu
-```
-
->> [Hint: Want to save some space ? Then use this]
-
-```bash
-repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b Tiramisu
 ```
 
 ### Download the source
@@ -40,14 +34,16 @@ repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b Tiramisu
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
 
-### Build
-
-```bash
-# Set up environment
+### Set up environment for Build
+```
 . build/envsetup.sh
-# Choose a target
+```
+### Choose a target
+```
 lunch aosp_$device-userdebug
-# Build the code
+```
+### Build the code
+```
 mka bacon -jX
 ```
 
@@ -63,26 +59,53 @@ mka bacon -jX
 
 - For adding your device to the list of OFFICIALLY supported devices, you need to [**Fill the form & Apply for Maintainership**](https://projectelixiros.com/documentation) and fulfil the [**Maintainership requirement**](https://projectelixiros.com/documentation). Also you can contact us on Telegram profiles below.
 
-### Follow  us for more
+### Some important links below
+* [**Maintainers Requirements**](https://projectelixiros.com/documentation)
+* [**Device Requirements**](https://projectelixiros.com/documentation)
+* [**Apply for Maintainership**](https://docs.google.com/forms/d/1eme8i0nXFNpv2fEfbskoANIwLUGy4KcYXssluWv6obE)
+* [**XDA Template**](https://raw.githubusercontent.com/Project-Elixir/docs/Tiramisu/xda_template.txt)
 
- * [**Telegram Announcements Channel**](https://t.me/Elixir_Updates)
- * [**Our OFFICIAL Website**](https://projectelixiros.com/)
- * [**Our Team**](https://projectelixiros.com/team)
- * [**Currently supported devices**](https://projectelixiros.com/download)
- * [**Changelog**](https://projectelixiros.com/changelog)
- * [**Telegram Discussion Group**](https://t.me/Elixir_Discussion)
+<br>
 
+<p align="center">
+  <img src="https://i.imgur.com/3ptBcpR.png" />
+</p>
 
-### Do consider donating or buying me a coffee on Paypal if you want to appreciate our work or join us on Patreon for sustainable support and early build access.
+### Official Support Group & Channel
+ * [**Elixir Telegram Channel**](https://telegram.me/Elixir_Updates)
+ * [**Elixir Telegram Group**](https://telegram.me/Elixir_Discussion)
+ 
+Have you joined it already? Okay, good. Now if you need to contact us, well, you may ask in our [**Telegram**](https://telegram.me/Elixir_Discussion) Support Group, ~~we may or may not answer.~~
+ 
+ ### Official Website and Downloads
+ * [**Elixir Website**](https://projectelixiros.com/)
+ * [**Elixir Team**](https://projectelixiros.com/team)
+ * [**Elixir Downloads**](https://projectelixiros.com/download)
+ * [**Elixir Changelog**](https://projectelixiros.com/changelog)
 
-```bash
-Patreon : https://www.patreon.com/join/uglykid24
+<br>
+
+<p align="center">
+  <img src="https://i.imgur.com/Oe2dGbl.png" />
+</p>
+
+- UPI ID :  
 ```
-```bash
-GPAY UPI ID: dwarmachine24@oksbi
-```
-```bash
-PAYPAL: https://www.paypal.me/uglykid24
+dwarmachine24@oksbi
 ```
 
-# Happy Building :)
+- Bitcoin (BTC):  
+```
+3Pm6JtwqCuTfKe1Szn23C8ZutF32eFtzf9
+```
+
+- PayPal: https://www.paypal.me/uglykid24
+- Get early build access: https://www.patreon.com/join/uglykid24
+- Buy me a coffee: https://www.buymeacoffee.com/Uglykid/membership
+
+<br>
+
+<p align="center">
+  <img src="https://i.imgur.com/EtbsAyn.png" />
+</p>
+
