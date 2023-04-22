@@ -193,7 +193,9 @@
   <!-- Extras -->
   <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="github" revision="master" clone-depth="1" />
   <project path="prebuilts/tools-custom" name="prebuilts_tools-custom" remote="elixir" clone-depth="1" />
-  
+  <project path="prebuilts/clang/host/linux-x86/clang-r475365b" name="android_prebuilts_clang_host_linux-x86_clang-r475365b" remote="elixir-gitlab" clone-depth="1" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r487747" name="android_prebuilts_clang_host_linux-x86_clang-r487747" remote="elixir-gitlab" clone-depth="1" />
+
   <!-- Pixel 7/7 Pro kernel modules -->
   <project path="kernel/google/gs201/private/google-modules/amplifiers" name="kernel/google-modules/amplifiers" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.32" />
   <project path="kernel/google/gs201/private/google-modules/aoc" name="kernel/google-modules/aoc" groups="pixel-extra" remote="aosp" revision="refs/tags/android-13.0.0_r0.32" />
