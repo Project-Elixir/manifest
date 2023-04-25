@@ -147,7 +147,6 @@
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="elixir" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="elixir" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="elixir" />
-  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="elixir" />
   <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="elixir" />
   <project path="packages/apps/Aperture" name="packages_apps_Aperture" remote="elixir" />
 
