@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="pixel"
+          fetch="https://github.com/PixelExperience"
+          revision="thirteen"
+          review="gerrit.pixelexperience.org" />
+
+  <!-- msm8996 HALS -->
+  <project path="hardware/qcom-caf/msm8996/audio" name="hardware_qcom-caf_msm8996_audio" remote="pixel" />
+  <!--<project path="hardware/qcom-caf/msm8996/display" name="hardware_qcom-caf_msm8996_display" groups="qcom,legacy-qcom" remote="pixel" />-->
+  <project path="hardware/qcom-caf/msm8996/media" name="hardware_qcom-caf_msm8996_media" remote="pixel" />
+
+  <!-- sm8350 HALS -->  
+  <project path="hardware/qcom-caf/sm8350/audio" name="hardware_qcom-caf_sm8350_audio" groups="qcom,qcom_audio" remote="pixel" />
+  <!--<project path="hardware/qcom-caf/sm8350/display" name="hardware_qcom-caf_sm8350_display" groups="qcom" remote="pixel" />-->
+  <project path="hardware/qcom-caf/sm8350/media" name="hardware_qcom-caf_sm8350_media" groups="qcom" remote="pixel" />
+
+  <!-- Pixel CAF repositories -->
+  <project path="hardware/qcom-caf/bengal/audio" name="hardware_qcom-caf_bengal_audio" remote="pixel" />
+  <project path="hardware/qcom-caf/bengal/gps" name="hardware_qcom-caf_bengal_gps" remote="pixel" />
+  <project path="hardware/qcom-caf/bengal/media" name="hardware_qcom-caf_bengal_media" remote="pixel" />
+    
+</manifest>	  
