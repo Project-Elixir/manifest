@@ -2,11 +2,18 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".."
+           fetch="https://android.googlesource.com"
            review="https://android-review.googlesource.com/" />
+
+  <remote name="github"
+           fetch="https://github.com/" />
+
   <default revision="refs/tags/android-14.0.0_r20"
+
            remote="aosp"
-           sync-j="4" />
+           sync-j="4"
+           sync-c="true"
+	   sync-f="true" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-14.0.0_r20"/>
   <contactinfo bugurl="go/repo-bug" />
@@ -1269,4 +1276,17 @@
   <project path="tools/tradefederation/prebuilts" name="platform/tools/tradefederation/prebuilts" groups="pdk,tradefed" clone-depth="1" />
   <project path="tools/treble" name="platform/tools/treble" groups="tools,pdk" />
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
+
+  <!-- Remove unused AOSP repos -->
+  <include name="snippets/remove.xml" />
+
+  <!-- Add all Project Elixir repos -->
+  <include name="snippets/elixir.xml" />
+
+  <!-- LineageOS -->
+  <include name="snippets/lineage.xml" />
+
+  <!-- Pixel Experience-->
+  <include name="snippets/pixel.xml" />
+
 </manifest>

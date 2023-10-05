@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="elixir"
+          fetch="https://github.com/Project-Elixir"
+          revision="refs/heads/UNO" />
+
+  <remote name="elixir-gitlab"
+          fetch="https://gitlab.com/projectelixiros/"
+          revision="refs/heads/UNO" />
+
+  <remote name="elixir-devices"
+          fetch="https://github.com/ProjectElixir-Devices"
+          revision="A14" />
+
+  <remote name="gitlab"
+          fetch="https://gitlab.com" />
+  
+  <!-- Framework repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="elixir" clone-depth="1" />
+  <project path="frameworks/base" name="frameworks_base" remote="elixir" clone-depth="1" />
+  <project path="frameworks/native" name="frameworks_native" remote="elixir" clone-depth="1" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="elixir" clone-depth="1" />
+
+  <!-- General repos -->
+  <project path="art" name="art" remote="elixir" clone-depth="1" />
+  <project path="manifest" name="manifest" remote="elixir" clone-depth="1" />
+  <project path="bionic" name="bionic" remote="elixir" clone-depth="1" />
+  <project path="bootable/recovery" name="bootable_recovery" remote="elixir" clone-depth="1" />
+  <project path="build/make" name="build" remote="elixir" groups="pdk" clone-depth="1" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="elixir" groups="pdk,tradefed" clone-depth="1" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>	  
+
+  <!-- External Repos-->
+  <project path="external/piex" name="external_piex" remote="elixir" clone-depth="1" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="elixir" clone-depth="1" />
+  
+  <!-- Hardware repos -->
+  <project path="hardware/xiaomi" name="hardware_xiaomi" remote="elixir"  clone-depth="1" />
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="elixir"  clone-depth="1" />
+  <project path="hardware/custom/interfaces" name="hardware_custom_interfaces" remote="elixir" revision="UNO-Public" clone-depth="1" />
+  <project path="hardware/libhardware" name="hardware_libhardware" remote="elixir" clone-depth="1" />
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" remote="elixir" clone-depth="1" />
+  
+  <!-- Packages repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="elixir"  clone-depth="1" />
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="elixir"  clone-depth="1" />
+  <project path="packages/apps/Aperture" name="packages_apps_Aperture" remote="elixir" clone-depth="1" />
+  <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="elixir" clone-depth="1" />
+
+  <!-- Packages (Services) repos -->
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="elixir"  clone-depth="1" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="elixir"  clone-depth="1" />
+
+  <!-- Packages (Modules) repos -->
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="elixir"  clone-depth="1" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="elixir"  clone-depth="1" />
+  <project path="packages/modules/Bluetooth/android/BtHelper" name="TheParasiteProject/packages_modules_Bluetooth_android_BtHelper" revision="14.0" remote="github" clone-depth="1" />
+  
+  <!-- System repos -->
+  <project path="system/sepolicy" name="system_sepolicy" remote="elixir"  clone-depth="1" />
+  <project path="system/core" name="android_system_core" remote="elixir"  clone-depth="1" />
+  <project path="system/vold" name="system_vold" remote="elixir"  clone-depth="1" />
+  <project path="system/security" name="system_security" remote="elixir"  clone-depth="1" />
+  <project path="system/bpf" name="system_bpf" remote="elixir" clone-depth="1" />
+  <project path="system/netd" name="system_netd" remote="elixir" clone-depth="1" />
+  <project path="system/qcom" name="system_qcom" remote="elixir" clone-depth="1" />
+  <project path="system/update_engine" name="system_update_engine" remote="elixir" clone-depth="1" />
+  <project path="system/libhidl" name="system_libhidl" remote="elixir" clone-depth="1" />
+
+  <!-- QCOM Sepolicies -->
+  <project path="device/custom/sepolicy" name="device_custom_sepolicy" remote="elixir"  clone-depth="1" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy-legacy-um" groups="qcom,sdm660" remote="elixir" clone-depth="1" />
+
+  <!-- Vendor repos -->
+  <project path="vendor/aosp" name="vendor_aosp" remote="elixir" clone-depth="1" />
+  
+  <!-- <project path="vendor/gapps" name="android_vendor_gapps" remote="elixir-gitlab" revision="Tiramisu" clone-depth="1"  />-->
+  <project path="vendor/gms" name="vendor_gms" groups="vendor" remote="elixir-gitlab" clone-depth="1" />
+  
+  <!-- Prebuilts repos -->
+  <project path="prebuilts/clang/host/linux-x86/clang-proton" name="kdrag0n/proton-clang" remote="github" revision="master" clone-depth="1"  />
+  <project path="prebuilts/clang/host/linux-x86/clang-r437112" name="android_prebuilts_clang_host_linux-x86_clang-r437112" remote="elixir" clone-depth="1"  />
+  <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="prebuilts_clang_host_linux-x86_clang-r450784d" revision="UNO" remote="elixir-gitlab" clone-depth="1" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r475365b" name="android_prebuilts_clang_host_linux-x86_clang-r475365b" remote="elixir-gitlab" clone-depth="1" />
+  <project path="prebuilts/clang/host/linux-x86/clang-r487747" name="android_prebuilts_clang_host_linux-x86_clang-r487747" revision="Tiramisu" remote="elixir-gitlab" clone-depth="1"  />
+  <project path="prebuilts/clang/host/linux-x86/clang-r498229" name="prebuilts_clang_host_linux-x86_clang-r498229" remote="elixir-gitlab" clone-depth="1"  />
+  <project path="prebuilts/clang/kernel/linux-x86/clang-r416183b" name="prebuilts_clang_kernel_linux-x86_clang-r416183b" remote="pixel" clone-depth="1" />
+  
+  <project path="prebuilts/tools-custom" name="prebuilts_tools-custom" remote="elixir" clone-depth="1" />
+  <project path="vendor/custom-preference" name="android_vendor_custom-preference" remote="elixir" clone-depth="1" />
+  <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" revision="main" remote="github" clone-depth="1" />
+
+  <!-- Tools -->
+  <project path="elixir/scripts" name="scripts" remote="elixir" clone-depth="1" />
+
+</manifest>
