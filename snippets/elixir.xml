@@ -83,7 +83,7 @@
     <linkfile src="os_pickup.bp" dest="kernel/google/gs101/private/google-modules/Android.bp" />
     <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
     <!-- add namespace for BT adv audio, as required for QTI BT stack -->
-    <linkfile src="os_pickup_qssi_bt.bp" dest="device/qcom/qssi/Android.bp" />
+    <!-- <linkfile src="os_pickup_qssi_bt.bp" dest="device/qcom/qssi/Android.bp" /> -->
   </project>
 
 <project path="hardware/qcom-caf/msm8953/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="lineage-20.0-caf-msm8953" />
