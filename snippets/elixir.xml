@@ -84,7 +84,6 @@
   
   <!-- Vendor repos -->
   <project path="vendor/aosp" name="vendor_aosp" remote="elixir"  clone-depth="1" />
-  <project path="vendor/gms" name="vendor_gapps" remote="elixir-gitlab" revision="Tiramisu-Public" clone-depth="1" />
 
   <!-- Vendor (Qcom) repos -->
   <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="elixir" />
