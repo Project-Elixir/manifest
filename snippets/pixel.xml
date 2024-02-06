@@ -2,8 +2,8 @@
 <manifest>
 
     <remote name="pixel"
-          fetch="https://github.com/PixelExperience-Staging"
-          revision="fourteen"
+          fetch="https://github.com/PixelExperience"
+          revision="thirteen"
           review="gerrit.pixelexperience.org" />
 
   <!-- Pixel 6/6 Pro/6a/7/7 Pro/7a/Tablet/Fold kernel modules -->
